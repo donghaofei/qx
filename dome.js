@@ -1,7 +1,8 @@
 const $ = Env('demo');
 
 !(async () => {
-    $.subt = '🔴 获取会话失败';
+    const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
+    $.subt = cookie;
 })()
     .catch((e) => {
         $.subt = '🔴 获取会话失败';
