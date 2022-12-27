@@ -2,10 +2,11 @@ const $ = Env('demo');
 
 !(async () => {
     const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
+    $.log(`🔴 获取会话失败:`);
 })()
     .catch((e) => {
         $.subt = '🔴 获取会话失败';
-        $.log(`🔴 获取会话失败: ${e}`); 
+        $.log(`🔴 获取会话失败:`); 
     })
     .finally(() => {
         $.msg($.name, $.subt, '');
