@@ -1,7 +1,6 @@
 const $ = Env('demo');
 
 !(async () => {
-    const cookie = $request.headers['Cookie'] || $request.headers['cookie'];
     $.log(`🔴 获取会话失败:`);
 })()
     .catch((e) => {
